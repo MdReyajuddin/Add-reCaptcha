@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 class="page-header">reCAPTCHA Example</h1>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+    <div class="g-recaptcha" data-sitekey="6LcdyuAUAAAAACo6LS3rvYuvrnOlaYEr9jab3Amt"></div>
+
+    <button type="submit" class="btn btn-primary">Post</button>
+  </form>
+
+</body>
+</html>
